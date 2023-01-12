@@ -1,11 +1,9 @@
-import requests
 from monitoring import website
 
 def check_websites(websites):
     for url in websites:
         site_status = website.is_alive(url)
         print(f'{url} -> {"OK" if site_status else "Not OK"}')
-
 
 
 if __name__ == '__main__':

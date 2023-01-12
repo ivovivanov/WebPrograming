@@ -1,5 +1,5 @@
 import requests
-import urllib3
+import urllib3.exceptions
 
 
 def is_alive(url):
@@ -10,7 +10,6 @@ def is_alive(url):
         if website_req.ok:
             url_check = True
     except:
-        # Here we would need to log the error
         pass
 
     return url_check
