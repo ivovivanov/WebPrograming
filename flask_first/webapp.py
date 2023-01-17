@@ -1,6 +1,7 @@
 from models import userdb
 from flask import Flask, render_template
 
+
 app = Flask(__name__)
 
 @app.route('/')
@@ -13,8 +14,12 @@ def users():
 
 @app.route('/about')
 def about():
-    render_template('about.html')
+    return render_template('about.html')
 
+#We want a page that will genarate random 10 character password. If choice is 0 - only letters, choice is 1 - letters and nubers, choice 2 letters numbers and special chars
+@app.route(/generate_pass/<choice>)
+def generate():
+    pass
 
 if __name__ == '__main__':
     app.run(debug=True)
