@@ -1,1 +1,1 @@
-navbar = []
+navbar = [{'name': 'Home', 'link': 'index.html'}, {'name': 'Users', 'link': 'users.html'}]
