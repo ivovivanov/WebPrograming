@@ -8,8 +8,8 @@ app = Flask(__name__)
 def index():
     return render_template('index.html', menu=navbar)
 
-@app.route('/users')
-def get_users():
+@app.route('/books')
+def get_books():
     return render_template('users.html', menu=navbar)
 
 @app.route('/pass_gen')

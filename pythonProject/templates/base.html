@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="https://html5-templates.com/" />
-    <title>{% block title %}{% endblock %}</title>
+    <title>{% block title %}{% endblock %}{{}}</title>
     <meta name="Flask App" content="Sample Flask App">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <script src="script.js"></script>
@@ -14,13 +14,7 @@
 <body>
 	<header>
 		<div id="logo"><img src="/logo.png">ITStep Flask App</div>
-		<nav>
-			<ul>
-				{% for item in menu %}
-   					<li><a href="{{ url_for(item.function) }}">{{ item.name }}</a>
-  				{% endfor %}
-			</ul>
-		</nav>
+		{% include 'navigation.html' %}
 	</header>
     {% block content %}{% endblock %}
 	<footer>
