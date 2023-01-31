@@ -10,7 +10,7 @@ def index():
 
 @app.route('/books')
 def get_books():
-    return render_template('users.html', menu=navbar)
+    return render_template('books.html', menu=navbar)
 
 @app.route('/pass_gen')
 def pass_gen():
