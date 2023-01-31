@@ -19,13 +19,28 @@ def about():
 
 #We want a page that will genarate random 10 character password. If choice is 0 - only letters, choice is 1 - letters and nubers, choice 2 letters numbers and special chars
 
-@app.route('/generate_pass/<int:choice>/<plen>')
-def generate(choice, plen):
+@app.route('/generate_pass/<int:choice>/<int:plen>')
+def generate_choice_len(choice, plen):
     if choice in [0, 1, 2]:
         generate_pass=pass_lib.passlib.gen_pass(choice, plen)
         return render_template('password.html', genpass=generate_pass[0], passlen=generate_pass[1])
     else:
         return render_template('password.html')
+
+@app.route('/generate_pass/<int:choice>')
+def generate_choice(choice):
+    if choice in [0, 1, 2]:
+        generate_pass=pass_lib.passlib.gen_pass(choice)
+        return render_template('password.html', genpass=generate_pass[0], passlen=generate_pass[1])
+    else:
+        return render_template('password.html')
+
+@app.route('/generate_pass')
+def generate():
+    generate_pass = pass_lib.passlib.gen_pass()
+    return render_template('password.html', genpass=generate_pass[0], passlen=generate_pass[1])
+
+
 
 
 if __name__ == '__main__':

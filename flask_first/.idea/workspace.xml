@@ -7,7 +7,6 @@
     <list default="true" id="64ec269c-e0d4-4275-a097-00bba246e620" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/pass_lib.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/pass_lib.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/password.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/password.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp.py" beforeDir="false" afterPath="$PROJECT_DIR$/webapp.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
