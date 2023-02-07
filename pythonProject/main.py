@@ -24,6 +24,9 @@ def get_book(isbn):
 def pass_gen():
     return render_template('pass_gen.html', menu=navbar, passwd=gen_password())
 
+'''
+Да се създаде още една стараница която да се казва Inventory. която да показва колко броя книги има в Inventory, колкото общо страници са всички книги и каква е средната големина на книгите като брой страници.
+'''
 
 
 if __name__ == '__main__':

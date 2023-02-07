@@ -10,7 +10,7 @@
 	</section>
 	<section id="pageContent">
 		<main role="main">
-			<p><H3> Book details </H3></br></p>
+			<p><H4> Book details:</H4></br></p>
 				<article>
 					<h1>{{ book.title }}</h1>
 					<p><strong>by {{ book.author }}</strong></p>
@@ -18,7 +18,7 @@
 					<p>{{ book.description }}</p>
 					<p>Number of pages: {{ book.pages }}</p>
 					<p>Published by: {{ book.publisher }}</p>
-					<p>Number of pages: {{ book.pages }}</p>
+					<p>webpage: <a href="{{ book.website }}">link</a></p>
 				</article>
 
 		</main>
