@@ -88,3 +88,12 @@ books = [
             "website":"https://doi.org/10.1007/978-1-4842-4221-6"
         }
     ]
+
+def get_book_isbn(isbn):
+    for book in books:
+        if book.get('isbn') == isbn:
+            return book
+    return None
+
+if __name__ == '__main__':
+    print(get_book_isbn('9781484200766'))

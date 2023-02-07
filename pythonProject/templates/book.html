@@ -10,14 +10,17 @@
 	</section>
 	<section id="pageContent">
 		<main role="main">
-			<p><H1> Our Inventory of Books </H1></br></p>
-			{% for el in inventory %}
+			<p><H3> Book details </H3></br></p>
 				<article>
-					<h2>{{ el.title }}</h2>
-					<p>{{ el.description }}</p>
-					<p> Read more ...</p>
+					<h1>{{ book.title }}</h1>
+					<p><strong>by {{ book.author }}</strong></p>
+					</br>
+					<p>{{ book.description }}</p>
+					<p>Number of pages: {{ book.pages }}</p>
+					<p>Published by: {{ book.publisher }}</p>
+					<p>Number of pages: {{ book.pages }}</p>
 				</article>
-			{% endfor %}
+
 		</main>
 
 	</section>
