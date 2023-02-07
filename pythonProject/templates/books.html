@@ -10,10 +10,13 @@
 	</section>
 	<section id="pageContent">
 		<main role="main">
-			<article>
-				<h2>General Users Information</h2>
-				<p>Here you will find general information for our user base.</p>
-			</article>
+			<p><H1> Our Inventory of Books </H1></br></p>
+			{% for el in inventory %}
+				<article>
+					<h2>{{ el.title }}</h2>
+					<p>{{ el.description }}</p>
+				</article>
+			{% endfor %}
 		</main>
 
 	</section>

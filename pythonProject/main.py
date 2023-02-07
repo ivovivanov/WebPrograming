@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 from models.nav import navbar
 from models.generator import gen_password
+from models.inventory import books as book_inventory
 
 app = Flask(__name__)
 
@@ -10,7 +11,7 @@ def index():
 
 @app.route('/books')
 def get_books():
-    return render_template('books.html', menu=navbar)
+    return render_template('books.html', menu=navbar, inventory=book_inventory)
 
 @app.route('/pass_gen')
 def pass_gen():
