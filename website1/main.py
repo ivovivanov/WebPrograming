@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+from models.aws_db import db_inst_types
 
 app = Flask(__name__)
 
@@ -9,8 +10,12 @@ def index():
 @app.route('/search', methods=['GET', 'POST'])
 def search():
     if request.method == 'POST':
-        my_var = request.form["search_string"]
-        return render_template('search.html', my_var=my_var)
+        db_search_criteria = request.form["search_string"]
+        dbs = list()
+        for db in db_inst_types:
+            if db_search_criteria in db.get('type'):
+                dbs.append(db)
+        return render_template('search.html', dbs=dbs)
     else:
         return render_template('search.html')
 
