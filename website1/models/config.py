@@ -1,1 +1,1 @@
-db_conn_string = 'postgresql://postgres:password@localhost/project'
+db_conn_string = 'postgresql://postgres:password@localhost/awsdb'
